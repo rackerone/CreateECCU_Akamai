@@ -72,6 +72,11 @@ else:
 	input_urls = raw_input("Please enter a single URL, or a list of URLs separated by a single space: ")
 	input_urls = input_urls.strip()
 
+if (len(input_urls) > 400):
+	clear_screen()
+	print "ERROR!  You have more than 400 container URLs in a single ECCU file (purge.data).  Please trim the number of URLs down to chunks of 400 and retry!"
+	sys.exit(1)
+
 data = eccu_txt % input_urls
 
 with open(ECCU_PURGE_FILE, 'w') as f:
