@@ -60,11 +60,13 @@ if (input_file.lower() == "yes" or input_file.lower() == "y"):
 	#Strip off any white space on either end of the string
 	input_urls = input_urls.strip()
 elif (input_file.lower() == "no" or input_file.lower() == "n"):
+	clear_screen()
 	print "You chose to manually input URLs!\n"
 	#Here we are manually entering URLs
 	input_urls = raw_input("Please enter a single URL, or a list of URLs, each separated by a single space:\n")
 	input_urls = input_urls.strip()
 else:
+	clear_screen()
 	print "Unable to understand answer, assuming you will enter URLs manually.\n"
 	#Here we are manually entering URLs
 	input_urls = raw_input("Please enter a single URL, or a list of URLs separated by a single space: ")
